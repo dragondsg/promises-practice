@@ -15,11 +15,11 @@
  */
 
 // Your code goes here
-export const getPromise = new Promise( (resolve, reject) => setTimeout( ()=>resolve('The PROMISE was RESOLVED'), 1000) );
-getPromise.then( (data) => {
-	console.log(data);
-	return data;
-});
+export const getPromise = new Promise( (resolve, reject) => setTimeout( ()=>resolve('The PROMISE was RESOLVED'), 1000) )
+	.then( (data) => {
+		console.log(data);
+		return data;
+	});
 
 
 // === TEST YOURSELF ===

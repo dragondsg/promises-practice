@@ -56,7 +56,7 @@ export const result3 = Promise.allSettled(promiseArr).then((val) => val);
  * Example: export const newPromiseArr = promiseArr.<method>()...
  */
 
-export const newPromiseArr = [promise1, promise4];
+export const newPromiseArr = promiseArr.filter((promise) => promise !== promise2 && promise !== promise3);
 
 // Do NOT refactor or update result 4, it's all set to work
 export const result4 = Promise.race(newPromiseArr)

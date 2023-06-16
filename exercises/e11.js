@@ -49,14 +49,13 @@ const getData = fetch(usersUrl);
 */
 
 export const result = getData
-	.then(res => {
-		return res.json();
+	.then((res) => res.json())
+	.then((val) => {
+		let logins = getLoginList(val);
+		console.log(logins);
+		return logins;
 	})
-	.then(val => {
-		console.log(getLoginList(val));
-		return getLoginList(val);
-	})
-	.catch (e => console.log(e));
+	.catch((e) => console.log(e));
 
 
 // === TEST YOURSELF ===

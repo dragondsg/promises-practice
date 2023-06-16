@@ -61,8 +61,7 @@ export function onReject(arg) {
  */
 
 // Your code goes here...
-export const promise = Promise.resolve(1)
-	.then(data => iterate(data))
+export const promise = Promise.resolve(iterate(1))
 	.then(data => iterate(data))
 	.then(data => iterate(data))
 	.then(data => iterate(data))
